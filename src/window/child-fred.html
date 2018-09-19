@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Fred Child Window</h1>
+    <p>Look out!</p>
+    <button id="msg">Send</button>
+</body>
+<script>
+    var childWin = require('./lib/child-window-client');
+
+    document.getElementById('msg').onclick = function() {
+        console.log("Sending to barney")
+        childWin.sendToWindow('barney', 'onmessage', {})
+    }
+</script>
+</html>

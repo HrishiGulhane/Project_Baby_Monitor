@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <link rel="stylesheet" href="./style.css">
+        <script>
+            // Disables noisy warning in Dev Console
+            window.ELECTRON_DISABLE_SECURITY_WARNINGS = 1
+            // This browser should NOT be allowed to
+            // execute remote JavaScript code.
+        </script>
+    </head>
+    <body>
+        <div class="panel">
+            <h1>Spark / Arduino Demo</h1>
+            <p>Using NodeJS calls here, we can signal to the Arduino.</p>
+        </div>
+
+        <div id="button-set" class="controls">
+            <button id="btn-flash">Flash LED</button>
+            <button id="btn-stop">Stop LED</button>
+            <button id="btn-fred">Make Fred window</button>
+            <button id="btn-barney">Make Barney window</button>
+        </div>
+        <div class="output">
+        </div>
+    </body>
+
+    <script src="./interaction.js" ></script>
+    <script>
+        window.onload = function() {
+            setupInteractionButtons()
+        }
+    </script>
+
+</html>
