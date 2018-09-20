@@ -40,7 +40,8 @@ function setupBoard() {
 
 function setupInteractionButtons() {
   childWindow.initialize();
-  setupBoard();
+  // setupBoard();
+  trio();
 
   getObject(BTN_FLASH).onclick = function() {
     console.log("Start flashing");
